@@ -1,0 +1,99 @@
+// ============================================================
+// 設定
+// ============================================================
+
+// HTML5の場合は「true」
+$html5 : true;
+
+// 画像パス_reset.scss
+// $imgPath : "/dist/img/";
+
+// ページの全体の横幅（大）
+$widthLg : 1920px;
+
+// ページの全体の横幅（標準）
+$width : 1170px;
+
+// ページの全体の横幅（中間）
+$width_md : 900px;
+
+// ページの全体の横幅（狭い）
+// // $width_sm : 800px;
+
+// カラム数
+// $colNum : 12;
+
+// カラム幅
+// $colWidth : 70px;
+
+// ガター幅
+// $gutter : 10px;
+
+// スマホ時ガター幅
+// $sp-gutter : 25px;
+
+//標準フォントサイズ(sp)
+// $fz_sp: 14;
+
+//標準フォントサイズ(pc)
+$fzPc: 16px;
+
+// 標準font-family
+// $font_serif : 'Shippori Mincho', serif;
+$fontSans : 'Noto Sans JP', sans-serif;
+
+//欧文font-family
+// $font_heebo : 'Heebo', sans-serif;
+// $font_roboto : 'Roboto', sans-serif;
+// $font_bebas : 'Bebas Neue', cursive;
+
+//z-index
+// $ziLogo: 1;
+// $ziMenuBg: 3;
+$ziMenu: 6;
+$ziMobileMenuBtn: 9;
+// $zi_navbtn: 210;
+// $zi_mv: 50;
+// $zi_bt-btn: 100;
+// $zi_modal: 300;
+
+//白黒
+$cWhite: #ffffff;
+$cBlack: #000000;
+
+//グレー
+$cGray1: #707070;
+$cGray2: #ECECEC;
+
+
+
+//キーカラー
+$cKey1: #0b71c3;
+// $cKey2: #392006;
+// $cKey3: #342c2c;
+// $cKey4: #F7F4E9;
+
+//黄色系
+// $c_yellow1: #C7C159;
+// $c_yellow2: #978F10;
+
+//青系
+$cBlue1: #E2F4FD;
+// $c_blue2: #3D98B4;
+// $c_blue3: #BAF4FF;
+
+//緑系
+// $c_green1: #02964E;
+// $c_green2: #EEF3F1;
+
+//赤系
+$cRed1: #F5A623;
+// $c_red2: #F7E6E9;
+// $c_red3: #FCF2F2;
+
+// 標準テキストカラー
+$cText: #000000;
+
+// リンクカラー
+// $cLink: $cKey1;
+// $c_active: $c_key3;

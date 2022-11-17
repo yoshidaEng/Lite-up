@@ -1,0 +1,33 @@
+/* 投稿記事 カテゴリーリスト
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+@use "../abstracts/mixins" as mixin;
+.catWidget {
+    li {
+        position: relative;
+        margin-top: 1.5em;
+        padding-left: 1em;
+        &::before {
+            display: block;
+            position: absolute;
+            top: 0.75em;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: val.$cText;
+            content: "";
+        }
+        a {
+            color: val.$cText;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}
+
+@include mixin.large {
+    .catWidget {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,85 @@
+/* プライバシーポリシー 会社概要ページ用
+------------------------------------------------------ */
+@use "..//abstracts/variables" as val;
+@use "../abstracts/mixins" as mixin;
+.pageContent {
+    &__inner {
+        padding: 60px 0;
+    }
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        &:not(:first-child) {
+            margin-top: 40px;
+        }
+    }
+    h3 {
+        margin-top: 40px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    p {
+        margin-top: 20px;
+    }
+    ol {
+        li {
+            display: flex;
+            align-items: baseline;
+            margin-top: 20px;
+            counter-increment: cnt;
+            &::before {
+                margin-right: 1em;
+                content: "("counter(cnt)")";
+            }
+        }
+    }
+    .wp-block-table {
+        table {
+            width: 100%;
+        }
+        tr {
+            border-top: 1px solid val.$cGray2;
+            &:last-child {
+                border-bottom: 1px solid val.$cGray2;
+            }
+        }
+        th {
+            width: 30%;
+            padding: 20px;
+            font-weight: bold;
+        }
+        td {
+            width: 70%;
+            padding: 20px;
+        }
+
+    }
+
+
+}
+
+@include mixin.medium {
+    .pageContent {
+        &__inner {
+            padding: 100px 0;
+        }
+        h2 {
+            font-size: 30px;
+            &:not(:first-child) {
+                margin-top: 50px;
+            }
+        }
+        h3 {
+            margin-top: 50px;
+            font-size: 24px;
+        }
+        p {
+            margin-top: 30px;
+        }
+        ol {
+            li {
+                margin-top: 30px;
+            }
+        }
+    }
+}

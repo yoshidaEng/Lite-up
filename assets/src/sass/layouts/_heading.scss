@@ -1,0 +1,65 @@
+/* 見出し
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+@use "../abstracts/variables.scss" as val;
+/* H1見出し */
+.lv1Heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::after {
+        display: inline-block;
+        width: 40px;
+        margin-top: 3px;
+        border-top: 1px solid;
+        content: "";
+    }
+    &__main {
+        font-size: 30px;
+        font-weight: bold;
+        &--uppercase {
+            text-transform: uppercase;
+        }
+    }
+    &__sub {
+        font-size: 14px;
+    }
+}
+/* H2見出し */
+.lv2Heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__main {
+        font-size: 24px;
+        font-weight: bold;
+        &--uppercase {
+            text-transform: uppercase;
+        }
+    }
+    &__sub {
+        font-size: 14px;
+    }
+}
+
+/* H3見出し */
+.lv3Heading {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@include mixin.medium {
+    .lv1Heading {
+        &__main {
+            font-size: 40px;
+        }
+    }
+    .lv2Heading {
+        &__main {
+            font-size: 30px;
+        }
+    }
+    .lv3Heading {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,16 @@
+/* フォーム 余白
+------------------------------------------------------ */
+@use "../abstracts/mixins" as mixin;
+.formWrapper {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+@include mixin.medium {
+    .formWrapper {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}

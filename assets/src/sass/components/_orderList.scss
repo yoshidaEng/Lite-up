@@ -1,0 +1,21 @@
+/* 括弧付き番号リスト
+------------------------------------------------------ */
+@use "..//abstracts/mixins" as mixin;
+.orderList {
+    &__item {
+        margin-top: 20px;
+        counter-increment: cnt;
+        &::before {
+            margin-right: 1em;
+            content: "("counter(cnt)")";
+        }
+    }
+}
+
+@include mixin.medium {
+    .orderList {
+        &__item {
+            margin-top: 30px;
+        }
+    }
+}

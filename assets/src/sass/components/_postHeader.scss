@@ -1,0 +1,28 @@
+/* 投稿記事 ヘッダー
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+@use "../abstracts/variables.scss" as val;
+.postHeader {
+    max-width: 940px;
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+    &__date {
+        margin-right: 20px;
+    }
+    &__title {
+        margin-top: 20px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid val.$cGray1;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+}
+
+@include mixin.medium {
+    .postHeader {
+        margin-top: 100px;
+    }
+}

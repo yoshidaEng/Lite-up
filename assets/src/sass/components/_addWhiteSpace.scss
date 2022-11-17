@@ -1,0 +1,12 @@
+/* 空白スペース
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+.addWhiteSpace {
+    width: 100%;
+    height: 60px;
+}
+@include mixin.medium {
+    .addWhiteSpace {
+        height: 100px;
+    }
+}

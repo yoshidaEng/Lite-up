@@ -1,0 +1,47 @@
+/* モバイル表示 グローバルナビゲーション
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+@use "../abstracts/mixins.scss" as mixin;
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    padding-top: 120px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    transition: all 0.3s;
+    background-color: #0E192D;
+    text-align: center;
+    z-index: val.$ziMenu;
+    &__list {
+        color: val.$cWhite;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    &__item:not(:first-child) {
+        margin-top: 40px;
+    }
+    &__link {
+        text-transform: uppercase;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+/*メニューを閉じる*/
+.mobileMenu[aria-hidden="true"] {
+    right: -100%;
+    opacity: 0;
+    visibility: hidden;
+}
+/*メニューを開く*/
+.mobileMenu[aria-hidden="false"] {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+}
+

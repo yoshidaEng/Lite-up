@@ -1,0 +1,36 @@
+/* arrowList
+------------------------------------------------------ */
+@use "../abstracts/mixins" as mixin;
+.arrowList {
+    font-size: 14px;
+    &__item::before {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin-right: 0.5em;
+        transform: rotate(45deg);
+        border-top: 2px solid;
+        border-right: 2px solid;
+        content: "";
+    }
+    &__item {
+        margin-top: 20px;
+    }
+}
+
+@include mixin.medium {
+    .arrowList {
+        display: flex;
+        align-items: center;
+        &__item {
+            margin-top: 0;
+            margin-right: 40px;
+        }
+    }
+}
+
+@include mixin.large {
+    .arrowList {
+        font-size: 16px;
+    }
+}

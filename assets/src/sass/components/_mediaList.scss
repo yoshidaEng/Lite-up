@@ -1,0 +1,18 @@
+/* mediaList
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+.mediaList {
+    padding-top: 20px;
+    background-color: #fff;
+    &__item:not(:first-child) {
+        margin-top: 30px;
+    }
+}
+
+@include mixin.medium {
+    .mediaList {
+        &__item:not(:first-child) {
+            margin-top: 0px;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+/* タブレット・PC表示 グローバルナビゲーション
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+@use "../abstracts/mixins.scss" as mixin;
+.pcMenu {
+    display: none;
+}
+@include mixin.medium {
+    .pcMenu {
+        display: block;
+        margin-left: auto;
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        &__item {
+            &:not(:last-child) {
+                padding-right: 40px;
+            }
+        }
+        &__link {
+            position: relative;
+            padding-bottom: 3px;
+            text-transform: uppercase;
+            &::after {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 3px;
+                transition: width 150ms;
+                background-color: val.$cKey1;
+                content: "";
+            }
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+/* tabButton
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+.tabButton {
+    padding: 10px;
+    background-color: val.$cWhite;
+    font-size: 12px;
+    text-align: center;
+    &--first {
+        color: val.$cKey1;
+        &[aria-selected="true"] {
+            background-color: val.$cKey1;
+            color: val.$cWhite;
+        }
+    }
+    &--second {
+        color: #19A2D5;
+        &[aria-selected="true"] {
+            background-color: #19A2D5;
+            color: val.$cWhite;
+        }
+    }
+    &--third {
+        color: #45B53C;
+        &[aria-selected="true"] {
+            background-color: #45B53C;
+            color: val.$cWhite;
+        }
+    }
+}

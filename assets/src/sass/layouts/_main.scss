@@ -1,0 +1,12 @@
+/* メインコンテンツ
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+.main {
+    padding-top: 90px;
+}
+
+@include mixin.medium {
+    .main {
+        padding-top: 100px;
+    }
+}

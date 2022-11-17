@@ -1,0 +1,81 @@
+/* メディア
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+@use "../abstracts/variables.scss" as val;
+.media {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    background-color: val.$cWhite;
+    &--bgBlue {
+        background-color: val.$cKey1;
+    }
+    &__body {
+        padding: 20px;
+    }
+    &__thumb {
+        width: 100%;
+        height: 100%;
+        padding: 20px 20px 0;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        &--colorWhite {
+            color: val.$cWhite;
+        }
+    }
+    &__mainTitle {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    &__subTitle {
+        font-size: 12px;
+    }
+    &__text {
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: left;
+        &--colorWhite {
+            color: val.$cWhite;
+        }
+    }
+    &__btn {
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
+@include mixin.medium {
+    .media {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        &--reverse {
+            flex-direction: row;
+        }
+        &__thumb {
+            flex-shrink: 0;
+            padding: 20px;
+            width: 50%;
+        }
+        &__body {
+            flex-grow: 1;
+            padding: 30px;
+            text-align: left;
+        }
+        &__heading {
+            align-items: flex-start;
+            padding-top: 0;
+        }
+        &__mainTitle {
+            font-size: 24px;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+/* サイドバー
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+@use "../abstracts/mixins" as mix;
+.aside {
+    margin-top: 60px;
+    &__title {
+        padding: 10px;
+        background-color: val.$cKey1;
+        color: val.$cWhite;
+        font-size: 24px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+@include mix.large {
+    .aside {
+        margin-top: 0;
+    }
+}

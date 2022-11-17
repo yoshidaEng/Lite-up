@@ -1,0 +1,19 @@
+/* カードリスト
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+@use "../abstracts/variables.scss" as val;
+.cards {
+    margin-top: 60px;
+    &--col3 {
+        display: grid;
+        gap: 30px;
+    }
+}
+
+@include mixin.medium {
+    .cards {
+        &--col3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

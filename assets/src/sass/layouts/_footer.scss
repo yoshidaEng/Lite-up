@@ -1,0 +1,42 @@
+/* フッター
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+@use "../abstracts/variables.scss" as val;
+.footer {
+    background-color: #0E192D;
+    &__logo {
+        text-align: center;
+        img {
+            width: 43px;
+            height: 50px;
+        }
+    }
+    &__inner {
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 60px;
+        padding-right: 20px;
+        padding-bottom: 60px;
+        padding-left: 20px;
+    }
+    &__copyright {
+        color: val.$cWhite;
+        text-align: center;
+    }
+}
+
+@include mixin.large {
+    .footer {
+        &__logo {
+            width: 30%;
+            text-align: left;
+            img {
+                width: 53px;
+                height: 60px;
+            }
+        }
+        &__inner {
+            display: flex;
+        }
+    }
+}

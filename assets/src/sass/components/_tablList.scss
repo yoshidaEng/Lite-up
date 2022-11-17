@@ -1,0 +1,13 @@
+/* tabList
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+@use "../abstracts/mixins"as mixin;
+.tabList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1170px;
+    &__item {
+        width: 33%;
+    }
+}

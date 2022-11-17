@@ -1,0 +1,44 @@
+/* カード
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+@use "../abstracts/mixins" as mixin;
+.card {
+    height: 100%;
+    background-color: val.$cWhite;
+    &--link {
+        display: block;
+        transition: 300ms all;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__body {
+        padding: 20px;
+    }
+    &__title {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    &__thumb {
+        img {
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+    }
+    &__tagWrapper {
+        margin-top: 20px;
+    }
+}
+
+@include mixin.large {
+    .card {
+        &__title {
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+/* タグ
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+.tag {
+    display: inline-block;
+    min-width: 92px;
+    padding: 4px 10px;
+    border: 1px solid val.$cBlack;
+    background-color: val.$cWhite;
+    color: val.$cBlack;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    &--round {
+        border-radius: 30px;
+    }
+}

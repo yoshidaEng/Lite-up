@@ -1,0 +1,70 @@
+/* メニューボタン
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+@use "../abstracts/variables.scss" as val;
+.mobileMenuBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    padding: 15px;
+    transition: background-color 180ms linear;
+    border: 0;
+    background-color: #0E192D;
+    color: val.$cWhite;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: val.$ziMobileMenuBtn;
+    &:hover,
+    &:focus-visible {
+        opacity: 0.7;
+    }
+    &__line {
+        position: relative;
+        width: 24px;
+        height: 2px;
+        background-color: #fff;
+    }
+    &__line::before,
+    &__line::after {
+        display: block;
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        transition: transform 0.3s;
+        background-color: #fff;
+        content: "";
+    }
+    &__line::before {
+        top: -9px;
+    }
+    &__line::after {
+        bottom: -9px;
+    }
+    &__text {
+        margin-top: 12px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}
+
+/*close*/
+.mobileMenuBtn[aria-expanded="true"] .mobileMenuBtn__line {
+    background: transparent;
+}
+.mobileMenuBtn[aria-expanded="true"] .mobileMenuBtn__line::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+.mobileMenuBtn[aria-expanded="true"] .mobileMenuBtn__line::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+@include mixin.medium {
+    .mobileMenuBtn {
+        display: none;
+    }
+}

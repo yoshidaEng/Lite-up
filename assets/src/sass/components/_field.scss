@@ -1,0 +1,12 @@
+/* 導入事例紹介 社名入力領域
+------------------------------------------------------ */
+.field {
+    margin-top: 20px;
+    &__label {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    &__name {
+        margin-top: 20px;
+    }
+}

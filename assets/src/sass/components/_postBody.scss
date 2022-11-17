@@ -1,0 +1,197 @@
+/* 投稿記事 スタイル
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+@use "../abstracts/variables.scss" as val;
+.postBody {
+    //floatのclear忘れがあっても本文エリア内で解除されるようにしておく
+    &::after {
+        display: block;
+        clear: both;
+        content:"";
+    }
+
+    //post-body直下の要素（見出しを除く）に1.75emの上マージン
+    >*:not(h2,h3,h4,h5,h6) {
+        margin-top: 1.75em;
+    }
+
+    //Default Style
+    h2 {
+        padding-left: 0.3em;
+        border-left: 6px solid val.$cKey1;
+        font-size: 24px;
+        font-weight: bold;
+        & + * {
+            margin-top: 30px;
+        }
+        @include mixin.medium {
+            font-size: 30px;
+        & + * {
+            margin-top: 40px;
+            }
+        }
+    }
+
+    h3 {
+        margin-top: 60px;
+        padding-bottom: 0.1em;
+        border-bottom: 1px solid #707070;
+        font-size: 20px;
+        font-weight: bold;
+        & + * {
+            margin-top: 30px;
+        }
+        @include mixin.medium {
+            margin-top: 60px;
+            font-size: 24px;
+            & + * {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    h4 {
+        margin-top: 40px;
+        padding-bottom: 0.1em;
+        border-bottom: 1px solid #707070;
+        font-size: 16px;
+        font-weight: bold;
+        & + * {
+            margin-top: 20px;
+        }
+        @include mixin.medium {
+            margin-top: 40px;
+            font-size: 20px;
+        & + * {
+            margin-top: 20px;
+            }
+        }
+    }
+
+    h5 {
+        margin-top: 30px;
+        & + * {
+            margin-top: 20px;
+        }
+        @include mixin.medium {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        & + * {
+            margin-top: 20px;
+            }
+        }
+    }
+
+    h6 {
+        margin-top: 30px;
+        color: #666;
+        & + * {
+            margin-top: 20px;
+        }
+        @include mixin.medium {
+            margin-top: 30px;
+            font-size: 16px;
+            & + * {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &--caseStudyPage {
+        h2 {
+            padding-left: 9px;
+            border-left: 6px solid val.$cKey1;
+        }
+
+        h3 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid val.$cGray1;
+        }
+
+        h4 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid val.$cGray1;
+        }
+    }
+
+    ul {
+        & li {
+            position: relative;
+            margin-top: 1.5em;
+            padding-left: 1em;
+            &::before {
+                display: block;
+                position: absolute;
+                top: 0.75em;
+                left: 0;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #0E192D;
+                content: "";
+            }
+        }
+    }
+
+    ol {
+        padding: 0;
+        list-style: none;
+        >li {
+            margin-top: 1.5em;
+            margin-left: 1em;
+            list-style-type: decimal;
+        }
+    }
+
+    table {
+        width: 100%;
+        margin-top: 1.5em;
+        th {
+            padding: 20px;
+            border: 1px solid #707070;
+            background: #dddddd;
+            font-weight: bold;
+            text-align: left;
+            vertical-align: middle;
+        }
+        td {
+            padding: 20px;
+            border: 1px solid #707070;
+            text-align: left;
+            vertical-align: middle;
+        }
+    }
+    //モバイルでは全て1カラムセンター寄せ配置
+    img.alignnone,
+    img.alignleft,
+    img.alignright,
+    img.aligncenter {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+        overflow: hidden;
+    }
+
+
+    @include mixin.medium {
+        img.alignnone {
+            margin-left: 0;
+        }
+        img.alignleft { //画像左配置：回り込み
+            max-width: 380px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            float: left;
+        }
+        img.alignright { //画像右配置：回り込み
+            max-width: 380px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            float: right;
+        }
+    }
+}

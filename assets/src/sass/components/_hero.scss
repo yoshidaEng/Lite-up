@@ -1,0 +1,68 @@
+/* ヒーローイメージ
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+@use "../abstracts/variables.scss" as val;
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    background-color: #ececec;
+    &__inner {
+        height: 100%;
+    }
+    &__imageForMobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__imageForPc {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+    &__animateText {
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        font-size: 40px;
+        font-weight: bold;
+            & .char {
+                display: inline-block;
+                @include mixin.animation(
+                    $name: text-fade-in,
+                    $direction: 300ms,
+                );
+        }
+    }
+}
+
+
+@keyframes text-fade-in {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@include mixin.medium {
+    .hero {
+        &__text {
+            font-size: 60px;
+        }
+        &__imageForMobile {
+            display: none;
+        }
+        &__imageForPc {
+            display: block;
+        }
+        &__text {
+            bottom: 12%;
+            left: 3%;
+        }
+    }
+}

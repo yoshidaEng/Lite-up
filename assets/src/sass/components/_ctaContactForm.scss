@@ -1,0 +1,42 @@
+/* お問い合わせフォーム誘導
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+@use "../abstracts/mixins" as mixin;
+.ctaContactForm {
+    &__body {
+        color: val.$cWhite;
+        text-align: center;
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    &__text {
+        margin-top: 20px;
+    }
+    &__btn {
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+
+@include mixin.medium {
+    .ctaContactForm {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &__body {
+            text-align: left;
+        }
+        &__title {
+            font-size: 30px;
+        }
+        &__text {
+            margin-top: 30px;
+        }
+        &__btn {
+            margin-top: 0;
+        }
+    }
+}

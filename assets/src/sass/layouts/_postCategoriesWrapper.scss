@@ -1,0 +1,13 @@
+/* post-categories-wrapper
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+.postCategoriesWrapper {
+    //post-categories-wrapper (margin-top: -25px) + 55px = 余白 30px
+    margin-top: 55px;
+}
+
+@include mixin.medium {
+    .postCategoriesWrapper {
+        margin-top: 76px;
+    }
+}

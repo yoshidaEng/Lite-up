@@ -1,0 +1,31 @@
+/* リード文
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+@use "../abstracts/mixins" as mixin;
+.pageLead {
+    max-width: val.$width;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    &__title {
+        font-size: 21px;
+        font-weight: bold;
+        text-align: left;
+    }
+    &__text {
+        margin-top: 40px;
+    }
+}
+
+@include mixin.medium {
+    .pageLead {
+        &__title {
+            font-size: 30px;
+            text-align: left;
+        }
+        &__text {
+            margin-top: 70px;
+        }
+    }
+}

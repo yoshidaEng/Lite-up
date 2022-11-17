@@ -1,0 +1,37 @@
+
+/* ページネーション
+------------------------------------------------------ */
+@use "../abstracts/variables"as val;
+
+.pager {
+    text-align: center;
+}
+
+.page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 24px;
+    border: 0;
+    color: val.$cText;
+    font-size: 16px;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    > li {
+        border: 1px solid val.$cText;
+        background-color: val.$cWhite;
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
+
+.page-numbers[aria-current="page"] {
+    background-color: val.$cText;
+    color: val.$cWhite;
+}
+
+.nav-links {
+    margin-top: 40px;
+}

@@ -1,0 +1,260 @@
+/* hero object animation
+------------------------------------------------------ */
+@use "../abstracts/mixins" as mixin;
+.heroAnimation {
+    //アニメーション01
+    & .chart01 {
+        @include mixin.animation(
+            $name: animate-vertical-object,
+            $duration: 1000ms,
+            $timing-function: ease-in-out,
+            $iteration-count: infinite,
+            $direction: alternate,
+        )
+    }
+    & .chart03 {
+        @include mixin.animation(
+            $name: animate-vertical-object,
+            $duration: 1000ms,
+            $timing-function: ease-in-out,
+            $iteration-count: infinite,
+            $direction: alternate,
+        )
+    }
+    //アニメーション02
+    & .chart02 {
+        @include mixin.animation(
+            $name: animate-vertical-object-reverse,
+            $duration: 1000ms,
+            $timing-function: ease-in-out,
+            $iteration-count: infinite,
+            $direction: alternate,
+        )
+    }
+
+    //アニメーション03
+    & .mobile-object01 {
+        @include mixin.animation(
+            $name: appear-ob01,
+            $duration: 9000ms,
+            $iteration-count: infinite,
+        )
+    }
+    & .mobile-object02 {
+        @include mixin.animation(
+            $name: appear-ob02,
+            $duration: 9000ms,
+            $iteration-count: infinite,
+        )
+    }
+    & .mobile-object03 {
+        @include mixin.animation(
+            $name: appear-ob03,
+            $duration: 9000ms,
+            $iteration-count: infinite,
+        )
+    }
+    & .mobile-object04 {
+        @include mixin.animation(
+            $name: appear-ob04,
+            $duration: 9000ms,
+            $iteration-count: infinite,
+        )
+    }
+    & .mobile-object05 {
+        @include mixin.animation(
+            $name: appear-ob05,
+            $duration: 9000ms,
+            $iteration-count: infinite,
+        )
+    }
+    & .mobile-object06 {
+        @include mixin.animation(
+            $name: appear-ob06,
+            $duration: 9000ms,
+            $iteration-count: infinite,
+        )
+    }
+}
+
+//アニメーション01
+@keyframes animate-vertical-object {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+//アニメーション02
+@keyframes animate-vertical-object-reverse {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes appear-ob01 {
+    0% {
+        opacity: 0;
+    }
+    12% {
+        opacity: 1;
+    }
+    24% {
+        opacity: 1;
+    }
+    36% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    72% {
+        opacity: 0;
+    }
+    84% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes appear-ob02 {
+    0% {
+        opacity: 0;
+    }
+    12% {
+        opacity: 0;
+    }
+    24% {
+        opacity: 1;
+    }
+    36% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    72% {
+        opacity: 0;
+    }
+    84% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes appear-ob03 {
+    0% {
+        opacity: 0;
+    }
+    12% {
+        opacity: 0;
+    }
+    24% {
+        opacity: 0;
+    }
+    36% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    72% {
+        opacity: 0;
+    }
+    84% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes appear-ob04 {
+    0% {
+        opacity: 0;
+    }
+    12% {
+        opacity: 0;
+    }
+    24% {
+        opacity: 0;
+    }
+    36% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    72% {
+        opacity: 1;
+    }
+    84% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear-ob05 {
+    0% {
+        opacity: 0;
+    }
+    12% {
+        opacity: 0;
+    }
+    24% {
+        opacity: 0;
+    }
+    36% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    72% {
+        opacity: 1;
+    }
+    84% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear-ob06 {
+    0% {
+        opacity: 0;
+    }
+    12% {
+        opacity: 0;
+    }
+    24% {
+        opacity: 0;
+    }
+    36% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    72% {
+        opacity: 0;
+    }
+    84% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

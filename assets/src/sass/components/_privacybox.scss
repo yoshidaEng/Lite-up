@@ -1,0 +1,18 @@
+/* PrivacyBox
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+@use "../abstracts/mixins"as mixin;
+.privacybox {
+    margin-top: 30px;
+    color: val.$cText;
+    text-align: center;
+}
+.privacybox-check {
+    margin-top: 30px;
+}
+.privacybox-text {
+    font-weight: 500;
+    a {
+        color: val.$cRed1;
+    }
+}

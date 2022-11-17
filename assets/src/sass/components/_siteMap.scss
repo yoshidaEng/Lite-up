@@ -1,0 +1,39 @@
+/* サイトマップ
+------------------------------------------------------ */
+@use "../abstracts/mixins" as mixin;
+.siteMap {
+    &__content {
+        margin-top: 40px;
+    }
+    &__mainTitle {
+        padding-bottom: 5px;
+        border-bottom: 1px solid #CBCBCB;
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    &__subTitle {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+}
+
+@include mixin.large {
+    .siteMap {
+        &__content {
+            margin-top: 60px;
+        }
+        &__mainTitle {
+            font-size: 30px;
+        }
+        &__wrapper {
+            margin-top: 40px;
+        }
+        &__subTitle {
+            font-size: 18px;
+        }
+        &__list {
+            margin-top: 20px;
+        }
+    }
+}

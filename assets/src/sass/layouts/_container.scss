@@ -1,0 +1,15 @@
+/* Container
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+@use "../abstracts/variables.scss" as val;
+.container {
+    max-width: val.$width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: content-box;
+    &._widthNarrow {
+        max-width: val.$width_md;
+    }
+}

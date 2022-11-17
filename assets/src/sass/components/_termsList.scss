@@ -1,0 +1,25 @@
+/* カテゴリータグ
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+@use "../abstracts/variables.scss" as val;
+.termsList {
+    max-width: 428px;
+    margin-right: auto;
+    margin-left: auto;
+    & li {
+        display: inline-block;
+        margin-top: 10px;
+        & a {
+            display: inline-block;
+            min-width: 92px;
+            padding: 4px 10px;
+            border: 1px solid #707070;
+            border-radius: 30px;
+            background-color: val.$cWhite;
+            color: val.$cBlack;
+            font-size: 12px;
+            line-height: 1;
+            text-align: center;
+        }
+    }
+}

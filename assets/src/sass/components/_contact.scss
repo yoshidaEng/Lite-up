@@ -1,0 +1,31 @@
+/* お問い合わせフォーム
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+
+.contact:not(:first-child) {
+    margin-top: 20px;
+}
+
+/**ラジオボタン*/
+.radio-list {
+    > li {
+        margin-top: 12px;
+    }
+}
+
+/*入力エリア*/
+.input-field {
+    margin-top: 12px;
+    > textarea {
+        margin-top: 12px;
+    }
+}
+
+/*ラベル*/
+.input-label {
+    color: val.$cText;
+}
+
+.contact-text {
+    color: val.$cText;
+}

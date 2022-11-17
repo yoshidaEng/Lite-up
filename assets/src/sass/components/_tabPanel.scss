@@ -1,0 +1,63 @@
+/* tabPanel
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+@use "../abstracts/mixins"as mixin;
+.tabpanel {
+    width: 100%;
+    &[aria-hidden="true"] {
+        display: none;
+    }
+    &[aria-hidden="false"] {
+        display: block;
+    }
+    &__header {
+        padding: 30px;
+        color: val.$cWhite;
+        &--first {
+            background-color: val.$cKey1;
+        }
+        &--second {
+            background-color: #19A2D5;
+        }
+        &--third {
+            background-color: #45B53C;
+        }
+    }
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &::after {
+            display: inline-block;
+            width: 40px;
+            margin-top: 5px;
+            border-top: 1px solid;
+            content: "";
+        }
+    }
+    &__mainTitle {
+        font-size: 30px;
+        font-weight: bold;
+        &--uppercase {
+            text-transform: uppercase;
+        }
+    }
+    &__subTitle {
+        font-size: 14px;
+    }
+    &__text {
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
+@include mixin.medium {
+    .tabpanel {
+        &__mainTitle {
+            font-size: 30px;
+        }
+        &__text {
+            margin-top: 40px;
+        }
+    }
+}

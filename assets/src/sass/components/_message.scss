@@ -1,0 +1,25 @@
+/* お問い合わせ完了ページ
+------------------------------------------------------ */
+@use "../abstracts/mixins.scss" as mixin;
+@use "../abstracts/variables.scss" as val;
+.message {
+    margin-right: auto;
+    margin-left: auto;
+    &__text {
+        text-align: center;
+    }
+    &__btn {
+        margin-top: 40px;
+        text-align: center;
+        & a {
+            text-decoration: underline;
+        }
+    }
+}
+@include mixin.medium {
+    .message {
+        &__btn {
+            margin-top: 60px;
+        }
+    }
+}
